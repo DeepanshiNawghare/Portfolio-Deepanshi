@@ -8,8 +8,7 @@ export default function Profile() {
         <div className='container-fluid' id='profile'>
             <div className="row">
                 <div className="col-md-12 my-4">
-                    <div className="
-                    ">
+                    <div >
                         <div className="profile_sec">
                             <div className='profile_logo '>
                                 <img src='../assets/deepanshi.png' className='img-fluid' alt='logo' />
@@ -21,8 +20,6 @@ export default function Profile() {
                                 <div className='profile_contact'>
                                     <h2>Deepanshi Nawghare </h2>
                                     <h2>Based in Indore (M.P), India</h2>
-                                    {/* <a href='*' download>Resume</a> */}
-
                                 </div>
                                 <p className='copyright_cnt'>
                                     © 2023 Deepanshi. All Rights Reserved

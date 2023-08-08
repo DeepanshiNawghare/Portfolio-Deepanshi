@@ -17,24 +17,24 @@ export default function Portfolio() {
                     <div className='portfolio_cnt'>
                         <div className="portfolio_img" data-aos="fade-up" data-aos-duration="2000">
                             <img src='../assets/cyborg.png' alt='cyborg' />
-                            <a href='https://playful-brigadeiros-de0397.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
+                            <a href='https://cyborg-games.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
                         </div>
                         <h5 className='tagline mt-3 ms-2'>Cyborg</h5>
                         <div className="portfolio_img" data-aos="fade-up" data-aos-duration="2000">
                             <img src='../assets/casino1.png' alt='casino' />
-                            <a href='https://nimble-tarsier-b17def.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
+                            <a href='https://casino-55.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
                         </div>
                         <h5 className='tagline mt-3 ms-2'>Casino</h5>
 
                         <div className="portfolio_img" data-aos="fade-up" data-aos-duration="2000">
                             <img src='../assets/cooltee.png' alt='cooltees' />
-                            <a href='https://shimmering-kulfi-e34714.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
+                            <a href='https://cool-tees.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
                         </div>
                         <h5 className='tagline mt-3 ms-2'>Cool Tees</h5>
 
                         <div className="portfolio_img" data-aos="fade-up" data-aos-duration="2000">
                             <img src='../assets/blue.png' alt='blue portfolio' />
-                            <a href='https://marvelous-croissant-44bb65.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
+                            <a href='https://portfolio-blue-1.netlify.app' target='_blank' className="btn project_visit1">Visit Site</a>
                         </div>
                         <h5 className='tagline mt-3 ms-2'>Portfolio Blue</h5>
 
