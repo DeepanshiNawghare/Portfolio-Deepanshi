@@ -1,0 +1,86 @@
+.portfolio_cnt {
+    color: white;
+    width: 80%;
+}
+
+.portfolio_img {
+    margin-top: 30px;
+    position: relative;
+}
+
+.portfolio_img img {
+    width: 100%;
+}
+
+.portfolio_img:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.project_visit1 {
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    background-color: gainsboro !important;
+    z-index: 9;
+    width: 100px;
+    border-radius: 50px !important;
+}
+
+.portfolio_img:hover .project_visit1 {
+    background-color: #1f1f1f !important;
+    color: white;
+}
+
+.project_visit1:focus {
+    outline: 0;
+    border: none;
+}
+
+.portfolio_img:hover+.tagline {
+    text-decoration: underline !important;
+}
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    .portfolio_cnt {
+        width: 100%;
+    }
+
+    .portfolio_img img {
+        height: 180px;
+    }
+
+    .project_visit1 {
+        font-size: 12px;
+    }
+
+    .project_visit1 {
+        bottom: 12px;
+        width: 75px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    .portfolio_cnt {
+        width: 100%;
+    }
+}
+
+/* MEADIA QUERIES  for small lap device*/
+@media screen and (min-width:993px) and (max-width:1024px) {
+    .portfolio_cnt {
+        width: 100%;
+    }
+
+}

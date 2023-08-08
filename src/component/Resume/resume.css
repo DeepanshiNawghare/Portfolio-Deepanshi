@@ -1,0 +1,83 @@
+.resume:hover .resume_1 {
+    background: #28e98c;
+}
+
+.resume:hover .resume_3 span {
+    color: #28e98c;
+}
+
+.resume_1 {
+    width: 12px;
+    height: 12px;
+    background: #656565;
+    border-radius: 50%;
+}
+
+.resume_2 {
+    background: #333333;
+    width: 1px;
+    height: 100%;
+    margin-left: 5px;
+}
+
+.resume_txt_year {
+    color: #999999;
+}
+
+.resume_3 h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0 5px;
+}
+
+.resume_institute {
+    color: #28e98c !important;
+}
+
+.resume_3 p {
+    font-size: 13px;
+    color: #999999;
+}
+
+.resume_3 h5 {
+    color: gainsboro;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+.resume_btn a {
+    background-color: #28e98c;
+    padding: 10px 40px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 16px;
+    width: max-content;
+    cursor: pointer;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.resume_btn a:hover {
+    background-color: transparent;
+    color: #28e98c;
+    border: 2px solid #28e98c;
+}
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    .resume_cnt {
+        width: 100%;
+    }
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {}
+
+/* MEADIA QUERIES  for small lap device*/
+@media screen and (min-width:993px) and (max-width:1024px) {}

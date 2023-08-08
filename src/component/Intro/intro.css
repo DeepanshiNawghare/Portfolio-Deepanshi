@@ -1,0 +1,155 @@
+.intro_txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_txt h2 {
+    font-size: 50px;
+    letter-spacing: -0.2px;
+    line-height: 70px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.intro_txt h2 span {
+    color: #28e98c;
+
+}
+
+.intro_txt p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999
+}
+
+.scroll_box {
+    float: right;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.scroll_arrow {
+    font-size: 35px;
+    position: absolute;
+    color: #ffffff;
+    right: 52px;
+    top: 60px;
+}
+
+.intro_exp {
+    display: flex;
+    gap: 50px;
+    margin-top: 30%;
+    color: #999999;
+}
+
+.intro_exp h1 {
+    color: #28e98c;
+    font-size: 72px;
+    line-height: 56px;
+    margin-bottom: 38px;
+}
+
+.rotate {
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    .intro_txt h2 {
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 25px;
+    }
+
+    .intro_txt p {
+        font-size: 15px;
+    }
+
+    .intro_exp {
+        gap: 30px;
+        margin-top: 215px;
+    }
+
+    .intro_exp h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .scroll_box {
+        float: right;
+
+    }
+
+    .scroll_arrow {
+        font-size: 18px;
+        right: 22px;
+        top: 25px;
+    }
+
+    .scroll_img {
+        height: 65px;
+    }
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    .intro_txt h2 {
+        font-size: 45px;
+        line-height: 1.3;
+    }
+
+    .intro_txt p {
+        font-size: 16px;
+        max-width: 480px;
+    }
+
+    .intro_exp {
+        margin-top: 40%;
+    }
+
+
+    .scroll_arrow {
+        font-size: 20px;
+        right: 36px;
+        top: 45px;
+    }
+
+    .scroll_img {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1024px) {
+
+    .intro_txt h2 {
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 25px;
+    }
+
+    .scroll_box {
+        margin-top: 3rem;
+    }
+
+    .scroll_arrow {
+        font-size: 20px;
+        right: 36px;
+        top: 45px;
+    }
+
+    .scroll_img {
+        height: 100px;
+    }
+}

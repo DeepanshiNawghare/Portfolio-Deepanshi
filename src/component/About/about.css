@@ -1,0 +1,41 @@
+.about_sec p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999
+}
+
+.heading_about {
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    margin-bottom: 40px;
+}
+
+.heading_about span {
+    color: #28e98c;
+}
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    .about_sec p {
+        font-size: 15px;
+    }
+
+    .heading_about {
+        font-size: 32px;
+    }
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    .about_sec p {
+        font-size: 16px;
+    }
+
+    .heading_about {
+        font-size: 40px;
+    }
+
+
+}

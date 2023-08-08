@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none !important;
+  text-transform: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.video_container {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.subtitle_head {
+  display: flex;
+  gap: 5px;
+  width: max-content;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 50px 0;
+  border: 1px solid #565656;
+  padding: 9px 20px;
+  border-radius: 30px;
+}
+
+.heading_cnt {
+  font-size: 65px;
+  letter-spacing: -0.2px;
+  line-height: 90px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.heading_cnt span {
+  color: #28e98c;
+}
+
+.left_cnt {
+  position: fixed;
+}
+
+.main_cnt {
+  width: 85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+.cnt_3 {
+  position: relative;
+  left: 25%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+  .full_cnt {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main_cnt {
+    width: 100%;
+  }
+
+  .heading_cnt {
+    font-size: 35px;
+    line-height: 1.3;
+    margin-bottom: 60px;
+  }
+
+  .subtitle_head {
+    font-size: 12px;
+    margin: 30px 0;
+
+  }
+
+  .left_cnt {
+    position: static;
+  }
+
+  .cnt_3 {
+
+    position: static;
+
+  }
+
+
+
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+  .main_cnt {
+    width: 90%;
+  }
+
+  .subtitle_head {
+    margin: 50px 0;
+
+  }
+
+  .heading_cnt {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 40px;
+  }
+
+  .left_cnt {
+    position: static;
+  }
+
+  .cnt_3 {
+
+    position: static;
+
+  }
+
+}
+
+/* MEADIA QUERIES  for small lap device*/
+@media screen and (min-width:993px) and (max-width:1024px) {
+
+  /* .main_cnt {
+    width: 90%;
+  }
+
+  .subtitle_head {
+    margin: 50px 0;
+
+  }*/
+
+  .heading_cnt {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 45px;
+  }
+
+
+  .cnt_3 {
+
+    position: relative;
+    left: 32%;
+
   }
 }

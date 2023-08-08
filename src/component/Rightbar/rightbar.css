@@ -1,0 +1,43 @@
+.rightbar_sec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #999999;
+    border: 1px solid #565656;
+    padding: 40px 20px;
+    width: max-content;
+    position: fixed;
+    top: 200px;
+    margin-left: 35px;
+    border-radius: 30px;
+}
+
+.rightbar_sec a {
+    color: #999999;
+    font-size: 20px;
+}
+
+.rightbar_sec a:hover {
+    color: #28e98c;
+}
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    .rightbar_sec {
+        display: none;
+    }
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    .rightbar_sec {
+        display: none;
+
+    }
+
+    .rightbar_sec {
+
+        margin-left: 25px;
+
+    }
+}

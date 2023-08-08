@@ -1,0 +1,49 @@
+.skill_cnt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 24px;
+}
+
+.skill_cnt_card {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill_cnt_icon {
+    border: 2px solid #565656;
+    border-radius: 70px;
+    margin-bottom: 20px;
+    height: 160px;
+    width: 105px;
+    padding: 30px 25px;
+}
+
+.skill_cnt_icon:hover {
+    border: 2px solid #28e98c;
+    color: #28e98c;
+}
+
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    .skill_cnt {
+        gap: 40px 0px;
+        justify-content: center;
+    }
+}
+
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    .skill_cnt {
+        gap: 50px 60px;
+    }
+}
+
+/* MEADIA QUERIES  for small lap device*/
+@media screen and (min-width:993px) and (max-width:1024px) {
+    .skill_cnt {
+        gap: 50px 60px;
+    }
+
+}
