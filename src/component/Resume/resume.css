@@ -74,10 +74,58 @@
     .resume_cnt {
         width: 100%;
     }
+
+    .resume_3 h3 {
+        font-size: 20px;
+        padding: 8px 0 4px;
+    }
+
+    .resume_3 h5 {
+        font-size: 14px;
+        padding-bottom: 4px;
+    }
+
+    .resume_3 p {
+        font-size: 12px;
+    }
+
+    .resume_txt_year {
+        font-size: 13px;
+    }
+
+    .resume_btn a {
+        padding: 10px 30px;
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* MEADIA QUERIES  for medium device*/
-@media screen and (min-width:768px) and (max-width:992px) {}
+@media screen and (min-width:768px) and (max-width:992px) {
+    .resume_3 h3 {
+        font-size: 22px;
+    }
+
+    .resume_3 h5 {
+        font-size: 14px;
+    }
+
+    .resume_btn a {
+        padding: 10px 35px;
+        font-size: 15px;
+    }
+}
 
 /* MEADIA QUERIES  for small lap device*/
-@media screen and (min-width:993px) and (max-width:1024px) {}
+@media screen and (min-width:993px) and (max-width:1024px) {
+    .resume_3 h3 {
+        font-size: 22px;
+    }
+
+    .resume_btn a {
+        padding: 10px 35px;
+        font-size: 15px;
+    }
+}

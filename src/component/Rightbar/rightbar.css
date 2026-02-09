@@ -32,12 +32,18 @@
 @media screen and (min-width:768px) and (max-width:992px) {
     .rightbar_sec {
         display: none;
+    }
+}
 
+/* MEADIA QUERIES for small lap device*/
+@media screen and (min-width:993px) and (max-width:1024px) {
+    .rightbar_sec {
+        margin-left: 20px;
+        padding: 35px 18px;
+        top: 180px;
     }
 
-    .rightbar_sec {
-
-        margin-left: 25px;
-
+    .rightbar_sec a {
+        font-size: 18px;
     }
 }

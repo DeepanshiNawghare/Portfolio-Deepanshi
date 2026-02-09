@@ -77,3 +77,57 @@ input:-webkit-autofill:hover {
     border: 2px solid #28e98c;
     background-color: transparent;
 }
+
+/* MEDIA QUERIES for small device */
+@media screen and (max-width:767px) {
+    .contact_form {
+        gap: 15px;
+    }
+
+    .contact_form label {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .contact_form input,
+    textarea {
+        font-size: 16px;
+    }
+
+    .contact_btn button {
+        padding: 10px 30px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .attachment label {
+        font-size: 12px;
+        gap: 8px;
+    }
+}
+
+/* MEDIA QUERIES for medium device */
+@media screen and (min-width:768px) and (max-width:992px) {
+    .contact_form {
+        gap: 18px;
+    }
+
+    .contact_form input,
+    textarea {
+        font-size: 17px;
+    }
+
+    .contact_btn button {
+        padding: 10px 35px;
+        font-size: 15px;
+    }
+}
+
+/* MEDIA QUERIES for small lap device */
+@media screen and (min-width:993px) and (max-width:1024px) {
+
+    .contact_form input,
+    textarea {
+        font-size: 17px;
+    }
+}

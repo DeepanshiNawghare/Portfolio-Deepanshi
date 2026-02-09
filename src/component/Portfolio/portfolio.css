@@ -1,86 +1,317 @@
-.portfolio_cnt {
-    color: white;
-    width: 80%;
+/* ===================================
+   UNIFORM GRID LAYOUT
+   =================================== */
+.portfolio_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2.5rem;
 }
 
-.portfolio_img {
-    margin-top: 30px;
+/* ===================================
+   GLASSMORPHISM CARD STYLING
+   =================================== */
+.project_card {
     position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #565656;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
 }
 
-.portfolio_img img {
-    width: 100%;
-}
-
-.portfolio_img:after {
-    position: absolute;
+.project_card::before {
     content: '';
-    width: 100%;
-    height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(40, 233, 140, 0.05) 0%,
+            transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.project_visit1 {
+.project_card:hover::before {
+    opacity: 1;
+}
+
+.project_card:hover {
+    transform: translateY(-8px);
+    border-color: #28e98c;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(40, 233, 140, 0.5),
+        0 0 40px rgba(40, 233, 140, 0.25);
+}
+
+/* ===================================
+   PROJECT VISUAL SECTION
+   =================================== */
+.project_visual {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.project_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project_card:hover .project_visual img {
+    transform: scale(1.1);
+}
+
+/* Quick View Overlay */
+.quick_view_overlay {
     position: absolute;
-    right: 15px;
-    bottom: 20px;
-    background-color: gainsboro !important;
-    z-index: 9;
-    width: 100px;
-    border-radius: 50px !important;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(40, 233, 140, 0.1) 0%,
+            rgba(0, 0, 0, 0.85) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
 }
 
-.portfolio_img:hover .project_visit1 {
-    background-color: #1f1f1f !important;
-    color: white;
+.project_card:hover .quick_view_overlay {
+    opacity: 1;
 }
 
-.project_visit1:focus {
-    outline: 0;
-    border: none;
+.quick_view_btn {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #28e98c;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
 }
 
-.portfolio_img:hover+.tagline {
-    text-decoration: underline !important;
+.project_card:hover .quick_view_btn {
+    transform: scale(1) translateY(-4px);
 }
 
-/* MEADIA QUERIES  for small device*/
-@media screen and (max-width:767px) {
-    .portfolio_cnt {
-        width: 100%;
+.quick_view_btn:hover {
+    background: #2fff9a;
+    transform: scale(1.15) translateY(-6px) !important;
+}
+
+/* ===================================
+   PROJECT INFO SECTION
+   =================================== */
+.project_info {
+    flex: 1;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    justify-content: center;
+}
+
+.project_title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.3px;
+    transition: color 0.3s ease;
+}
+
+.project_card:hover .project_title {
+    color: #28e98c;
+}
+
+.project_desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #999999;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Mobile Devices (Portrait) - Single Column */
+@media screen and (max-width: 767px) {
+    .portfolio_grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-top: 2rem;
     }
 
-    .portfolio_img img {
-        height: 180px;
+    .project_card {
+        min-height: 300px;
     }
 
-    .project_visit1 {
-        font-size: 12px;
+    .project_visual {
+        height: 200px;
     }
 
-    .project_visit1 {
-        bottom: 12px;
-        width: 75px;
+    .project_info {
+        padding: 1.25rem;
     }
 
-    .tagline {
-        font-size: 18px;
+    .project_title {
+        font-size: 1.15rem;
+    }
+
+    .project_desc {
+        font-size: 0.85rem;
+    }
+
+    /* Show overlays by default on mobile */
+    .quick_view_overlay {
+        opacity: 0.9;
+    }
+
+    .quick_view_btn {
+        transform: scale(1);
     }
 }
 
-/* MEADIA QUERIES  for medium device*/
-@media screen and (min-width:768px) and (max-width:992px) {
-    .portfolio_cnt {
-        width: 100%;
+/* Tablet Devices - 2 Column Grid */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .portfolio_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.35rem;
+    }
+
+    .project_card {
+        min-height: 310px;
+    }
+
+    .project_visual {
+        height: 200px;
+    }
+
+    .project_info {
+        padding: 1.35rem;
+    }
+
+    .project_title {
+        font-size: 1.2rem;
+    }
+
+    .project_desc {
+        font-size: 0.88rem;
     }
 }
 
-/* MEADIA QUERIES  for small lap device*/
-@media screen and (min-width:993px) and (max-width:1024px) {
-    .portfolio_cnt {
-        width: 100%;
+/* Small Laptops - 2 Column Grid */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .portfolio_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.4rem;
     }
 
+    .project_card {
+        min-height: 310px;
+    }
+
+    .project_visual {
+        height: 210px;
+    }
+
+    .project_info {
+        padding: 1.4rem;
+    }
+
+    .project_title {
+        font-size: 1.2rem;
+    }
+
+    .project_desc {
+        font-size: 0.88rem;
+    }
+}
+
+/* Large Screens - 3 Column Grid */
+@media screen and (min-width: 1201px) {
+    .portfolio_grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .project_card {
+        min-height: 320px;
+    }
+
+    .project_visual {
+        height: 220px;
+    }
+
+    .project_info {
+        padding: 1.5rem;
+    }
+
+    .project_title {
+        font-size: 1.25rem;
+    }
+
+    .project_desc {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Large Screens - 2 Column Grid */
+@media screen and (min-width: 1400px) {
+    .portfolio_grid {
+        gap: 1.75rem;
+    }
+
+    .project_card {
+        min-height: 340px;
+    }
+
+    .project_visual {
+        height: 230px;
+    }
+
+    .project_info {
+        padding: 1.75rem;
+    }
+
+    .project_title {
+        font-size: 1.35rem;
+    }
+
+    .project_desc {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================
+   PERFORMANCE OPTIMIZATIONS
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    .project_card,
+    .project_visual img,
+    .quick_view_btn {
+        transition: none;
+    }
 }

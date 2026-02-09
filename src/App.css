@@ -1,6 +1,12 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,6 +26,17 @@ a {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+/* Hide video on mobile for better performance */
+@media screen and (max-width:767px) {
+  .body-overlay {
+    display: none;
+  }
+
+  .video_container {
+    background-color: #000000;
+  }
 }
 
 .subtitle_head {
@@ -77,6 +94,8 @@ a {
 
   .main_cnt {
     width: 100%;
+    gap: 5rem;
+    padding: 0 20px;
   }
 
   .heading_cnt {
@@ -109,6 +128,8 @@ a {
 @media screen and (min-width:768px) and (max-width:992px) {
   .main_cnt {
     width: 90%;
+    gap: 6rem;
+    padding: 0 15px;
   }
 
   .subtitle_head {

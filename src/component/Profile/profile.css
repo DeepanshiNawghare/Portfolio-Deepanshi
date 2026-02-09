@@ -119,3 +119,23 @@
         height: 200px;
     }
 }
+
+/* MEADIA QUERIES for small lap device*/
+@media screen and (min-width:993px) and (max-width:1024px) {
+    .profile_logo img {
+        width: 30%;
+    }
+
+    .profile_img img {
+        height: 220px;
+    }
+
+    .profile_contact h2 {
+        font-size: 22px;
+    }
+
+    .profile_btn a {
+        font-size: 16px;
+        padding: 10px 35px;
+    }
+}
