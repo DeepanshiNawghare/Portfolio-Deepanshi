@@ -4,24 +4,30 @@ import { BiMessageSquareDetail } from 'react-icons/bi'
 import { AiOutlineCloudUpload } from 'react-icons/ai'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import { useRef } from 'react';
-import emailjs from 'emailjs-com'
 import toast, { Toaster } from 'react-hot-toast';
+import { useEffect } from 'react';
 
 
 
 
 export default function Contact() {
-    AOS.init();
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
-    const form = useRef();
-    const sendEmail = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_dsoalho', 'template_aej5guf', form.current, 'JYW5llwyRgQjtoE43')
-            .then((result) => {
-                console.log(result.text);
-                toast.success("Message sent Succesfully", {
+        const form = e.target;
+        const formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => {
+                toast.success("Message sent successfully", {
                     style: {
                         background: '#333',
                         color: '#fff',
@@ -30,12 +36,12 @@ export default function Contact() {
                         primary: '#28e98c',
                         secondary: '#FFFAEE',
                     }
-                })
-            }, (error) => {
-                console.log(error.text);
-                toast.error("Fill Details")
+                });
+                form.reset();
+            })
+            .catch(() => {
+                toast.error("Something went wrong. Please try again.");
             });
-        e.target.reset()
     };
 
     return (
@@ -49,7 +55,20 @@ export default function Contact() {
                         </h5>
                         <h2 className='heading_cnt'>Let's Work<span>Together!</span></h2>
                         <div className='row' data-aos="fade-right" data-aos-duration="2000">
-                            <form ref={form} onSubmit={sendEmail} className='contact_form'>
+                            <form
+                                name="contact"
+                                method="POST"
+                                data-netlify="true"
+                                data-netlify-honeypot="bot-field"
+                                onSubmit={handleSubmit}
+                                className='contact_form'
+                            >
+                                <input type="hidden" name="form-name" value="contact" />
+                                <p style={{ display: 'none' }}>
+                                    <label>
+                                        Don’t fill this out if you're human: <input name="bot-field" />
+                                    </label>
+                                </p>
                                 <div className="col-lg-6 col-12 ">
                                     <label>Full Name<sup>*</sup></label>
                                     <input type='text' name='name' placeholder='Your Full Name' required ></input>

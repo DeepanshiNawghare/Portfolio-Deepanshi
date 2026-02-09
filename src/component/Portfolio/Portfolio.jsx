@@ -131,7 +131,7 @@ export default function Portfolio() {
                             </div>
                             <div className="project_info">
                                 <h3 className="project_title">Cool Tees Store</h3>
-                                <p className="project_desc">Modern e-commerce with seamless UX</p>
+                                <p className="project_desc">E-commerce T-shirt store</p>
                             </div>
                         </div>
                     </div>
