@@ -25,7 +25,7 @@ export default function Resume() {
                                     <div className='resume_2'></div>
                                 </div>
                                 <div className='resume_3 ms-5 pb-3'>
-                                    <span className='resume_txt_year'>March 2024 - Nov 2024</span>
+                                    <span className='resume_txt_year'>March 2024 - Nov 2025</span>
                                     <h3>Web Developer | <span className='resume_institute'>Fovty Solutions</span></h3>
                                     <p>Worked on responsive web applications using React.js, JavaScript, HTML, and CSS. Converted design mockups into interactive UI, created reusable components, and integrated APIs for dynamic content. Focused on improving usability, performance, and overall user experience.</p>
                                 </div>
